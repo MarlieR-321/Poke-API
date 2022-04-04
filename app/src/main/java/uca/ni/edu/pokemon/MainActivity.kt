@@ -67,6 +67,8 @@ class MainActivity : AppCompatActivity() {
                     val adapter = PokemonAdapter(poke,applicationContext)
 
                     binding.rvPokemon.adapter = adapter
+                }else{
+                    Toast.makeText(this@MainActivity,"No se ha encontrado un registro",Toast.LENGTH_SHORT).show()
                 }
             }catch (ex:Exception){
                 val msg = Toast.makeText(this@MainActivity,"Error de conexion",Toast.LENGTH_LONG)
